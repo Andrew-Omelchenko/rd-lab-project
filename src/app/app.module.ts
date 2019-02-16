@@ -15,6 +15,7 @@ import { ProductDetailsItemComponent } from './shared/product-details-item/produ
 import { BannerCardComponent } from './shared/banner-card/banner-card.component';
 import { PrivacyPolicyComponent } from './pages/static/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions/terms-and-conditions.component';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions
     ProductDetailsItemComponent,
     BannerCardComponent,
     PrivacyPolicyComponent,
-    TermsAndConditionsComponent
+    TermsAndConditionsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

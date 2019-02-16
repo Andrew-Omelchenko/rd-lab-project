@@ -1,3 +1,21 @@
-<p>
-  footer works!
-</p>
+<footer class="footer fixed-bottom text-white bg-dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <ul class="list-inline list-unstyled">
+          <li class="link list-inline-item">
+            <a class="text-warning" routerLink="/privacy-policy">Privacy Policy</a>
+          </li>
+          <li class="link list-inline-item">
+            <a class="text-warning" routerLink="/terms-and-conditions">Terms & Conditions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        Copyright &copy;{{ copyright }}
+      </div>
+    </div>
+  </div>
+</footer>
