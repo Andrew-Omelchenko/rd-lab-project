@@ -13,6 +13,8 @@ import { FeaturedProductCardComponent } from './shared/featured-product-card/fea
 import { ProductDetailsCardComponent } from './shared/product-details-card/product-details-card.component';
 import { ProductDetailsItemComponent } from './shared/product-details-item/product-details-item.component';
 import { BannerCardComponent } from './shared/banner-card/banner-card.component';
+import { PrivacyPolicyComponent } from './pages/static/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { BannerCardComponent } from './shared/banner-card/banner-card.component'
     FeaturedProductCardComponent,
     ProductDetailsCardComponent,
     ProductDetailsItemComponent,
-    BannerCardComponent
+    BannerCardComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent
   ],
   imports: [
     BrowserModule,
