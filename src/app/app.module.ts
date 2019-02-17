@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -18,6 +19,7 @@ import { BannerCardComponent } from './shared/banner-card/banner-card.component'
 import { PrivacyPolicyComponent } from './pages/static/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions/terms-and-conditions.component';
 import { UserComponent } from './pages/user/user.component';
+import {ProductsService} from './core/services/products.service';
 
 @NgModule({
   declarations: [
@@ -38,10 +40,12 @@ import { UserComponent } from './pages/user/user.component';
   ],
   imports: [
     BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
     AppRoutingModule,
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
