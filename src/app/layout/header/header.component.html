@@ -1,6 +1,6 @@
-<header class="header fixed-top text-white bg-dark">
-  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink="/">Logo</a>
+<header class="header">
+  <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/" title="Home">Logo</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -20,13 +20,17 @@
       id="navbarSupportedContent"
       [ngClass]="{'show': !isCollapsed}"
     >
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" title="Search">
-          <i class="fa fa-search"></i>
-        </button>
+      <form class="form-inline my-2 d-sm-inline flex-sm-grow-1">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <span class="input-group-append">
+            <button class="btn btn-outline-success" type="submit" title="Search" (click)="onSearch($event)">
+              <i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
       </form>
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" routerLink="/my-cart" title="My Cart">
             <i class="fa fa-shopping-cart"></i>
@@ -38,7 +42,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/products">All Products</a>
+          <a class="nav-link" routerLink="/products" title="List All Products">All Products</a>
         </li>
       </ul>
     </div>

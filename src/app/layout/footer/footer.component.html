@@ -1,21 +1,44 @@
-<footer class="footer fixed-bottom text-white bg-dark">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <ul class="list-inline list-unstyled">
-          <li class="link list-inline-item">
-            <a class="text-warning" routerLink="/privacy-policy">Privacy Policy</a>
-          </li>
-          <li class="link list-inline-item">
-            <a class="text-warning" routerLink="/terms-and-conditions">Terms & Conditions</a>
-          </li>
-        </ul>
-      </div>
+<footer class="footer">
+  <nav class="navbar navbar-expand-sm fixed-bottom navbar-dark bg-dark text-center">
+    <a class="navbar-brand" routerLink="/" title="Home">Logo</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      [attr.aria-expanded]="!isCollapsed"
+      (click)="toggleCollapse()"
+      [ngClass]="{'collapsed': isCollapsed}"
+    >
+      <span class="text-white">
+        <i class="fa fa-arrows-alt"></i>
+      </span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      [ngClass]="{'show': !isCollapsed}"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/privacy-policy" title="Privacy Policy">
+            Privacy Policy
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/terms-and-conditions" title="Terms & Conditions">
+            Terms & Conditions
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" title="Home">
+            Copyright &copy;{{ copyright }}
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        Copyright &copy;{{ copyright }}
-      </div>
-    </div>
-  </div>
+  </nav>
 </footer>

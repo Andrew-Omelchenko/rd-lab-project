@@ -9,10 +9,14 @@ import { strings } from '../../core/constants/strings';
 })
 export class FooterComponent implements OnInit {
   private copyright: string = strings.footer.copyright;
+  isCollapsed = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleCollapse(): void {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }

@@ -16,4 +16,8 @@ export class HeaderComponent implements OnInit {
   toggleCollapse(): void {
     this.isCollapsed = !this.isCollapsed;
   }
+
+  onSearch(event) {
+    event.preventDefault();
+  }
 }
