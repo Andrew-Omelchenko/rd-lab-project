@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="row">
+  <div
+    *ngIf="error.ok; else errorTemplate"
+    class="row"
+  >
     <app-featured-product-card
       class="col-xs-12 col-md-6 col-xl-4"
       *ngFor="let product of products"
@@ -7,4 +10,16 @@
     >
     </app-featured-product-card>
   </div>
+  <ng-template #errorTemplate>
+    <p class="text-danger">
+      Unable to load products data
+    </p>
+    <button
+      class="btn btn-primary"
+      type="button"
+      (click)="loadProductsData()"
+    >
+      Reload
+    </button>
+  </ng-template>
 </div>

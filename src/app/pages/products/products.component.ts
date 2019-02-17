@@ -7,12 +7,21 @@ import {ProductsService} from '../../core/services/products.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  products = [];
-  error = {};
+  private products = [];
+  private error = {
+    ok: true
+  };
 
   constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
+    // Fetches products data
+    this.loadProductsData();
+  }
+
+  private loadProductsData() {
+    // Resets error
+    this.error.ok = true;
     this.productsService.get()
       .subscribe(
         (response) => {

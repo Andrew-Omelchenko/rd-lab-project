@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit } from '@angular/core';
 
 import { API } from '../../core/constants/config';
 
@@ -14,7 +14,7 @@ export class FeaturedProductCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.product);
+    // console.log(this.product);
   }
 
 }
