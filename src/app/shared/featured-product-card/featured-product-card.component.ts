@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
+import { API } from '../../core/constants/config';
+
 @Component({
   selector: 'app-featured-product-card',
   templateUrl: './featured-product-card.component.html',
@@ -7,6 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FeaturedProductCardComponent implements OnInit {
   @Input() product: object = {};
+  private imageBaseUrl = `${API.BASE_URL}${API.IMAGES}`;
 
   constructor() { }
 

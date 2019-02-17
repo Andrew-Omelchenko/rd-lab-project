@@ -1,3 +1,9 @@
-<div class="col-xs-12 col-md-6 col-xl-4">
-  featured-product-card works!
+<div class="card h-100">
+  <img class="card-img-top" src="{{ imageBaseUrl }}{{ product.image }}.jpg" alt="{{ product.item }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.item }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <p><strong>{{ product.price }}</strong></p>
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
 </div>
