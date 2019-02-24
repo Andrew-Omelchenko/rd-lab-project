@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
-import { API } from '../constants/config';
+import { API } from '../../../core/constants/config';
 
 @Injectable()
 export class ProductsService {

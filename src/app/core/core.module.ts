@@ -1,11 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {ProductsService} from './services/products.service';
+import {ProductsService} from '../pages/products/services/products.service';
 import {HomeComponent} from './components/home/home.component';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AppRoutingModule} from '../app-routing.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {AppRoutingModule} from '../app-routing.module';
     AppRoutingModule
   ],
   exports: [
-    AppRoutingModule,
+    RouterModule,
     HeaderComponent,
     FooterComponent,
     HomeComponent
