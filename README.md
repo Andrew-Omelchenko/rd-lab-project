@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 [Database API](https://github.com/Andrew-Omelchenko/store-api.git)
 
-[Databese Structure](https://github.com/Andrew-Omelchenko/store-db.git)
+[Database Structure](https://github.com/Andrew-Omelchenko/store-db.git)
 
 ## Development server
 
