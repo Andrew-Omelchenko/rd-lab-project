@@ -4,7 +4,9 @@ export const API = {
     CREATE_USER: '/register',
     LOGIN: '/signin',
     PROFILE: '/profile',
-    PRODUCTS: '/products'
+    PRODUCTS: '/products',
+    SALES: '/sales',
+    FEATURED: '/featured'
   },
   IMAGES: '/static/images/'
 };
