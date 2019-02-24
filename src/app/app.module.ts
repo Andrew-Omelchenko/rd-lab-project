@@ -6,9 +6,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
+import { CoreModule } from './core/core.module';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductComponent } from './pages/product/product.component';
 import { MyCartComponent } from './pages/my-cart/my-cart.component';
@@ -19,14 +17,10 @@ import { BannerCardComponent } from './shared/banner-card/banner-card.component'
 import { PrivacyPolicyComponent } from './pages/static/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions/terms-and-conditions.component';
 import { UserComponent } from './pages/user/user.component';
-import {ProductsService} from './core/services/products.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
     ProductsComponent,
     ProductComponent,
     MyCartComponent,
@@ -43,9 +37,10 @@ import {ProductsService} from './core/services/products.service';
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    CoreModule
   ],
-  providers: [ProductsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { strings } from '../../core/constants/strings';
+import { strings } from '../../constants/strings';
 
 @Component({
   selector: 'app-footer',
