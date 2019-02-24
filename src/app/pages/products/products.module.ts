@@ -1,15 +1,17 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import {ProductsService} from './services/products.service';
+import { ProductsService } from './services/products.service';
 
-import {ProductsComponent} from './products.component';
-import {ProductsRoutingModule} from './products-routing.module';
-import {SharedModule} from '../../shared/shared.module';
+import { ProductsComponent } from './products.component';
+import { ProductDetailsCardComponent } from './product-details-card/product-details-card.component';
+import { ProductsRoutingModule } from './products-routing.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailsCardComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import {SharedModule} from '../../shared/shared.module';
     SharedModule
   ],
   exports: [
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailsCardComponent
   ],
   providers: [
     ProductsService

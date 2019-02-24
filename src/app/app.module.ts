@@ -8,8 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { ProductComponent } from './pages/product/product.component';
-import { ProductDetailsCardComponent } from './pages/product/product-details-card/product-details-card.component';
 import { PrivacyPolicyComponent } from './pages/static/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions/terms-and-conditions.component';
 import { PageNotFoundComponent } from './pages/static/page-not-found/page-not-found.component';
@@ -18,8 +16,6 @@ import { PageNotFoundComponent } from './pages/static/page-not-found/page-not-fo
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    ProductDetailsCardComponent,
     PrivacyPolicyComponent,
     TermsAndConditionsComponent,
     PageNotFoundComponent
