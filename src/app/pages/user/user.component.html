@@ -1,3 +1,31 @@
-<p>
-  user works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/user', 'sign-in']" title="Sign In">
+            Sign In
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/user', 'sign-up']" title="Sign Up">
+            Sigh Up
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/user', 'profile']" title="Profile">
+            Profile
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/user', 'log-out']" title="Profile">
+            Log Out
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,6 @@ import { ProductComponent } from './pages/product/product.component';
 import { ProductDetailsCardComponent } from './pages/product/product-details-card/product-details-card.component';
 import { PrivacyPolicyComponent } from './pages/static/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions/terms-and-conditions.component';
-import { UserComponent } from './pages/user/user.component';
 import { PageNotFoundComponent } from './pages/static/page-not-found/page-not-found.component';
 
 
@@ -23,7 +22,6 @@ import { PageNotFoundComponent } from './pages/static/page-not-found/page-not-fo
     ProductDetailsCardComponent,
     PrivacyPolicyComponent,
     TermsAndConditionsComponent,
-    UserComponent,
     PageNotFoundComponent
   ],
   imports: [
