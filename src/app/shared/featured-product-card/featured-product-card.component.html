@@ -1,5 +1,11 @@
 <div class="card h-100 p-3">
-  <img class="card-img-top" src="{{ imageBaseUrl }}{{ product.image }}.jpg" alt="{{ product.item }}">
+  <a [routerLink]="['/products', product.id]" title="Select Product">
+    <img
+      class="card-img-top"
+      src="{{ imageBaseUrl }}{{ product.image }}.jpg"
+      alt="{{ product.item }}"
+    >
+  </a>
   <div class="card-body">
     <h5 class="card-title">{{ product.item }}</h5>
     <p class="card-text">{{ product.description }}</p>
