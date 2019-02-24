@@ -9,24 +9,22 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ProductComponent } from './pages/product/product.component';
-import { MyCartComponent } from './pages/my-cart/my-cart.component';
 import { ProductDetailsCardComponent } from './pages/product/product-details-card/product-details-card.component';
-import { ProductDetailsItemComponent } from './pages/my-cart/product-details-item/product-details-item.component';
 import { PrivacyPolicyComponent } from './pages/static/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/static/terms-and-conditions/terms-and-conditions.component';
 import { UserComponent } from './pages/user/user.component';
+import { PageNotFoundComponent } from './pages/static/page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    MyCartComponent,
     ProductDetailsCardComponent,
-    ProductDetailsItemComponent,
     PrivacyPolicyComponent,
     TermsAndConditionsComponent,
-    UserComponent
+    UserComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

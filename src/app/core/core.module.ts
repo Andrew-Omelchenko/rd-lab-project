@@ -1,18 +1,24 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
 
-import {ProductsService} from '../pages/products/services/products.service';
+import {AppRoutingModule} from '../app-routing.module';
 import {HomeComponent} from './components/home/home.component';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
-import {AppRoutingModule} from '../app-routing.module';
-import {RouterModule} from '@angular/router';
+import {HomeBannerComponent} from './components/home-banner/home-banner.component';
+import {HomeSaleComponent} from './components/home-sale/home-sale.component';
+import {HomeFeaturedComponent} from './components/home-featured/home-featured.component';
+
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    HomeBannerComponent,
+    HomeSaleComponent,
+    HomeFeaturedComponent
   ],
   imports: [
     CommonModule,
@@ -22,10 +28,10 @@ import {RouterModule} from '@angular/router';
     RouterModule,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
-  ],
-  providers: [
-    ProductsService
+    HomeComponent,
+    HomeBannerComponent,
+    HomeSaleComponent,
+    HomeFeaturedComponent
   ]
 })
 export class CoreModule {}
