@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
+import {SalesService} from './services/sales.service';
 import {FeaturedService} from './services/featured.service';
 
 import {AppRoutingModule} from '../app-routing.module';
@@ -37,6 +38,9 @@ import {HomeFeaturedComponent} from './components/home-featured/home-featured.co
     HomeSaleComponent,
     HomeFeaturedComponent
   ],
-  providers: [FeaturedService]
+  providers: [
+    SalesService,
+    FeaturedService
+  ]
 })
 export class CoreModule {}
