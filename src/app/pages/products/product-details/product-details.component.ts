@@ -23,6 +23,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.id = this.route.snapshot.params.id;
     this.loadProductData();
+    // In case if somebody will change id manually or from code
     this.subscription = this.route.params
       .subscribe(
         (params: Params) => {
