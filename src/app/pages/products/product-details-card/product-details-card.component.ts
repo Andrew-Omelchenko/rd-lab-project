@@ -5,6 +5,7 @@ import { Product } from '../services/product.model';
 import { ProductService } from '../services/product.service';
 import { Subscription } from 'rxjs';
 
+import { API } from '../../../core/constants/config';
 
 @Component({
   selector: 'app-product-details-card',
@@ -18,6 +19,7 @@ export class ProductDetailsCardComponent implements OnInit, OnDestroy {
   private error = {
     ok: true
   };
+  private imageBaseUrl = `${API.BASE_URL}${API.IMAGES}`;
 
   constructor(private productService: ProductService,
               private route: ActivatedRoute) { }
