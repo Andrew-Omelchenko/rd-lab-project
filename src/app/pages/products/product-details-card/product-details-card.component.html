@@ -1,22 +1,16 @@
-<h1 class="text-center">Product Details</h1>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-      <img
-        class="img-fluid"
-        src="{{ imageBaseUrl }}{{ product.image }}.jpg"
-        alt="{{ product.item }}"
-        title="{{ product.item }}"
-      >
-    </div>
-    <div class="col-sm-6">
-      <h2>Product: <em>{{ product.item }}</em></h2>
-      <h5>Description: <em>{{ product.description }}</em></h5>
-      <h5>Category: <em>{{ product.category }}</em></h5>
-      <p><strong>Packaging: </strong><em>{{ product.packaging }}</em></p>
-      <p><strong>Price: ${{ product.price }}</strong></p>
-      <button class="btn btn-primary" type="button">Add to Cart</button>
-    </div>
-  </div>
+<div class="col-sm-6">
+  <img
+    class="img-fluid"
+    src="{{ imageBaseUrl }}{{ product.image }}.jpg"
+    alt="{{ product.item }}"
+    title="{{ product.item }}"
+  >
 </div>
-
+<div class="col-sm-6">
+  <h2>Product: <em>{{ product.item }}</em></h2>
+  <h5>Description: <em>{{ product.description }}</em></h5>
+  <h5>Category: <em>{{ product.category }}</em></h5>
+  <p><strong>Packaging: </strong><em>{{ product.packaging }}</em></p>
+  <p><strong>Price: ${{ product.price }}</strong></p>
+  <button class="btn btn-primary" type="button">Add to Cart</button>
+</div>

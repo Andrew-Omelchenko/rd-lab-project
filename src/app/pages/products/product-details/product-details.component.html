@@ -1,0 +1,23 @@
+<h1 class="text-center">Product Details</h1>
+<div
+  *ngIf="error.ok; else errorTemplate"
+  class="container-fluid"
+>
+  <app-product-details-card
+    class="row"
+    [product]="product"
+  >
+  </app-product-details-card>
+</div>
+<ng-template #errorTemplate>
+  <p class="text-danger">
+    Unable to load products data
+  </p>
+  <button
+    class="btn btn-primary"
+    type="button"
+    (click)="loadProductData()"
+  >
+    Reload
+  </button>
+</ng-template>
