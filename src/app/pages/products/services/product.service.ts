@@ -6,11 +6,11 @@ import { API } from '../../../core/constants/config';
 import {Product} from './product.model';
 
 @Injectable()
-export class ProductsService {
+export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public get(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(`${API.BASE_URL}${API.ENDPOINTS.PRODUCTS}`);
+  public get(id: number): Observable<Product> {
+    return this.httpClient.get<Product>(`${API.BASE_URL}${API.ENDPOINTS.PRODUCTS}/${id}`);
   }
 }

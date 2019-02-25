@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductsService } from './services/products.service';
+import { ProductService } from './services/product.service';
 
 import { ProductsComponent } from './products.component';
 import { ProductDetailsCardComponent } from './product-details-card/product-details-card.component';
@@ -23,7 +24,8 @@ import { SharedModule } from '../../shared/shared.module';
     ProductDetailsCardComponent
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    ProductService
   ]
 })
 export class ProductsModule { }
