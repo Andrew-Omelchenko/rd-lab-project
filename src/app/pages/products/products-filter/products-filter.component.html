@@ -1,0 +1,16 @@
+<form [formGroup]="productsFilter" class="form-inline">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter a value..."
+    formControlName="firstFilter"
+  >
+  <div>&nbsp;AND&nbsp;</div>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter a value..."
+    formControlName="secondFilter"
+  >
+  <button class="btn btn-primary" (click)="onSubmit">Go</button>
+</form>
