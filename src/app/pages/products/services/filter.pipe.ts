@@ -8,7 +8,7 @@ import { Product } from './product.model';
 export class FilterPipe implements PipeTransform {
 
   transform(values: Product[], filterString: string): Product[] {
-    const pattern = filterString.toLowerCase();
+    const pattern = (filterString || '').toLowerCase();
     if (values.length === 0 || pattern === '') {
       return values;
     }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import {ProductsService} from './services/products.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -8,7 +9,10 @@ import {ProductsService} from './services/products.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  private subscription: Subscription;
   private products = [];
+  private firstFilter = '';
+  private secondFilter = '';
   private error = {
     ok: true
   };
@@ -18,6 +22,11 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     // Fetches products data
     this.loadProductsData();
+  }
+
+  private onChangeFilterData(data) {
+    this.firstFilter = data.firstFilter;
+    this.secondFilter = data.firstFilter;
   }
 
   private loadProductsData() {

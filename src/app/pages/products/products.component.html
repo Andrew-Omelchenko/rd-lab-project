@@ -1,12 +1,12 @@
 <div class="container">
-  <app-products-filter></app-products-filter>
+  <app-products-filter (submit)="onChangeFilterData($event)"></app-products-filter>
   <div
     *ngIf="error.ok; else errorTemplate"
     class="row"
   >
     <app-featured-product-card
       class="col-sm-12 col-md-6 col-xl-4"
-      *ngFor="let product of products | filter:'cucumber'"
+      *ngFor="let product of products | filter:firstFilter | filter:secondFilter"
       [product]="product"
     >
     </app-featured-product-card>
