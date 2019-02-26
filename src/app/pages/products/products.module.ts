@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProductsService } from './services/products.service';
 import { ProductService } from './services/product.service';
+import { FilterPipe } from './services/filter.pipe';
 
 import { ProductsComponent } from './products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
@@ -14,7 +15,8 @@ import { SharedModule } from '../../shared/shared.module';
   declarations: [
     ProductsComponent,
     ProductDetailsComponent,
-    ProductDetailsCardComponent
+    ProductDetailsCardComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
