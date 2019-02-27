@@ -5,19 +5,13 @@ import {Error} from 'tslint/lib/error';
 
 import { API } from '../core/constants/config';
 
-interface Claims {
-  name: string;
-  email: string;
-  joined: string;
-}
-
 @Injectable()
 export class AuthService {
   private authToken: string;
   private authClaims: object;
 
   constructor(private router: Router, private httpClient: HttpClient) {
-    this.token = localStorage.getItem('token');
+    this.token = localStorage.getItem('token') || '';
     // payload
     this.claims = JSON.parse(localStorage.getItem('claims'));
   }
@@ -62,6 +56,11 @@ export class AuthService {
     return this.claims.exp * 1000 > Date.now();
   }
 
+  logout() {
+    this.clearStorage();
+    this.router.navigate(['/']);
+  }
+
   signup(userRegisterData) {
     const url = `${API.BASE_URL}${API.ENDPOINTS.CREATE_USER}`;
     const body = JSON.stringify(userRegisterData);
@@ -88,8 +87,11 @@ export class AuthService {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
     this.httpClient.post(url, body, {headers}).subscribe(
-      (data) => {
-        console.log(data);
+      (answer: { token: string }) => {
+        this.token = answer.token;
+        this.claims = this.parseJwtClaims(answer.token);
+        console.log(this.token, this.claims);
+        this.router.navigate(['/user', 'profile']);
       },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
@@ -99,27 +101,6 @@ export class AuthService {
         }
       }
     );
-
-
-    // const headers = new Headers({ 'content-type': 'application/json' });
-    // const init = {
-    //   method: 'POST',
-    //   headers,
-    //   body: JSON.stringify(userData),
-    //   mode: 'cors',
-    //   cache: 'default'
-    // };
-    // return fetch(`${API.BASE_URL}${API.ENDPOINTS.LOGIN}`, init)
-    //   .then(res => {
-    //     if (res.ok) {
-    //       return res.json().then(answer => {
-    //         this.token = answer.token;
-    //         this.claims = this.parseJwtClaims(answer.token);
-    //         return Promise.resolve({ answer, status: res.status });
-    //       });
-    //     }
-    //     return res.json().then(answer => Promise.reject({ answer, status: res.status }));
-    //   });
   }
 
   private parseJwtClaims(jwtToken) {

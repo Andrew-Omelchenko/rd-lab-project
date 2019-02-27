@@ -8,19 +8,12 @@ import { AuthService } from '../../../auth/auth.service';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
+  profile: object;
 
   constructor(private authService: AuthService) { }
-  profile: {
-    name: '',
-    email: '',
-    joined: ''
-  };
 
   ngOnInit() {
-    const { name, email, joined } = this.authService.claims;
-    this.profile.name = name;
-    this.profile.email = email;
-    this.profile.joined = joined;
+    this.profile = this.authService.claims || {};
   }
 
 }
