@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserComponent } from './user.component';
-import { UserSignInComponent } from './user-sign-in/user-sign-in.component';
-import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
+import { UserSigninComponent } from './user-signin/user-signin.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { UserLogOutComponent } from './user-log-out/user-log-out.component';
+import { UserLogoutComponent } from './user-logout/user-logout.component';
 
 const routes: Routes = [
   { path: '', component: UserComponent, children: [
-    { path: 'sign-in', component: UserSignInComponent },
-    { path: 'sign-up', component: UserSignUpComponent },
+    { path: 'signin', component: UserSigninComponent },
+    { path: 'signup', component: UserSignupComponent },
     { path: 'profile', component: UserProfileComponent },
-    { path: 'log-out', component: UserLogOutComponent }
+    { path: 'logout', component: UserLogoutComponent }
   ]}
 ];
 

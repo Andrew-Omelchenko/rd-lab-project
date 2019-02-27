@@ -1,30 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { UserComponent } from './user.component';
 import { UserRoutingModule } from './user-routing.module';
-import { UserSignInComponent } from './user-sign-in/user-sign-in.component';
-import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
+import { UserSigninComponent } from './user-signin/user-signin.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { UserLogOutComponent } from './user-log-out/user-log-out.component';
+import { UserLogoutComponent } from './user-logout/user-logout.component';
 
 @NgModule({
   declarations: [
     UserComponent,
-    UserSignInComponent,
-    UserSignUpComponent,
+    UserSigninComponent,
+    UserSignupComponent,
     UserProfileComponent,
-    UserLogOutComponent
+    UserLogoutComponent,
+    UserSignupComponent,
+    UserSigninComponent,
+    UserLogoutComponent
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     UserComponent,
-    UserSignInComponent,
-    UserSignUpComponent,
-    UserProfileComponent
+    UserSigninComponent,
+    UserSignupComponent,
+    UserProfileComponent,
+    UserLogoutComponent
   ]
 })
 export class UserModule { }
