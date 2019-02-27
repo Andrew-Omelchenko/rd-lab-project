@@ -1,13 +1,20 @@
-<div class="card h-100 p-3">
-  <img
-    class="card-img-top"
-    src="{{ imageBaseUrl }}{{ order.image }}.jpg"
-    alt="{{ order.item }}"
-  >
-  <div class="card-body">
-    <p class="card-title">{{ order.item }}</p>
-    <input type="number" min="0" max="100">
-    <p>${{ order.price }}</p>
+<div class="row text-white bg-dark">
+  <div class="col-sm-3">
+    <img
+      class="img-fluid"
+      class="card-img-top"
+      src="{{ imageBaseUrl }}{{ order.image }}.jpg"
+      alt="{{ order.item }}"
+    >
+  </div>
+  <div class="col-sm-6">
+    <div class="card-body">
+      <p class="card-title">{{ order.item }}</p>
+      <input type="number" min="0" max="100">
+      <p>${{ order.price }}</p>
+    </div>
+  </div>
+  <div class="col-sm-3">
     <button class="btn btn-primary" type="button">Remove</button>
   </div>
 </div>
