@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 import { SalesService } from './services/sales.service';
 import { FeaturedService } from './services/featured.service';
+import { CartService } from './services/cart.service';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -42,7 +43,8 @@ import { HomeFeaturedComponent } from './components/home-featured/home-featured.
   providers: [
     AuthService,
     SalesService,
-    FeaturedService
+    FeaturedService,
+    CartService
   ]
 })
 export class CoreModule {}

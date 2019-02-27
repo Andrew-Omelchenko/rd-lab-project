@@ -1,3 +1,13 @@
-<p>
-  product-details-item works!
-</p>
+<div class="card h-100 p-3">
+  <img
+    class="card-img-top"
+    src="{{ imageBaseUrl }}{{ order.image }}.jpg"
+    alt="{{ order.item }}"
+  >
+  <div class="card-body">
+    <p class="card-title">{{ order.item }}</p>
+    <input type="number" min="0" max="100">
+    <p>${{ order.price }}</p>
+    <button class="btn btn-primary" type="button">Remove</button>
+  </div>
+</div>
