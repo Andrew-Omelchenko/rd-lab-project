@@ -5,6 +5,12 @@ import {Error} from 'tslint/lib/error';
 
 import { API } from '../core/constants/config';
 
+interface Claims {
+  name: string;
+  email: string;
+  joined: string;
+}
+
 @Injectable()
 export class AuthService {
   private authToken: string;
@@ -64,7 +70,7 @@ export class AuthService {
     this.httpClient.post(url, body, {headers}).subscribe(
       (data) => {
         console.log(data);
-        this.router.navigate(['/user', 'profile']);
+        this.router.navigate(['/user', 'signin']);
       },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
