@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductsService } from './services/products.service';
 import { ProductService } from './services/product.service';
 import { FilterPipe } from './services/filter.pipe';
+import { Filter2Pipe } from './services/filter2.pipe';
 
 import { ProductsComponent } from './products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
@@ -19,6 +20,7 @@ import { ProductsFilterComponent } from './products-filter/products-filter.compo
     ProductDetailsComponent,
     ProductDetailsCardComponent,
     FilterPipe,
+    Filter2Pipe,
     ProductsFilterComponent
   ],
   imports: [

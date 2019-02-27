@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
 
   private onChangeFilterData(data) {
     this.firstFilter = data.firstFilter;
-    this.secondFilter = data.firstFilter;
+    this.secondFilter = data.secondFilter;
   }
 
   private loadProductsData() {

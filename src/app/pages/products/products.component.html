@@ -6,7 +6,7 @@
   >
     <app-featured-product-card
       class="col-sm-12 col-md-6 col-xl-4"
-      *ngFor="let product of products | filter:firstFilter | filter:secondFilter"
+      *ngFor="let product of products | filter:firstFilter | filter2:secondFilter"
       [product]="product"
     >
     </app-featured-product-card>
